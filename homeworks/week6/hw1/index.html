@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="utf-8">
+
+  <title>餐廳官網</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://necolas.github.io/normalize.css/latest/normalize.css">
+
+  <style>
+    .navbar {
+      box-shadow: -1.4px -1.4px 6px 0;
+      padding: 0px 24px;
+    }
+
+    .navbar .wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 84px;
+      background: white;
+    }
+
+    .navbar__site-name {
+      color: #489846;
+      font-size: 36px;
+    }
+      
+    .navbar__list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      font-size: 18px;
+    }
+
+    .navbar__list li {
+      margin-left: 36px;
+      padding: 12px 24px;
+      border-radius: 8px;
+    }
+
+    .navbar__list li.active, .navbar__list li:hover {
+      background: #ff7286;
+    }
+
+    .navbar__list li {
+      margin-left: 8px;
+      border-radius: 8px;
+      transition: background 0.2s;
+    }
+    
+    .navbar__list li.active a, .navbar__list li:hover a {
+      color: white;
+    }
+
+    .navbar__list li a {
+      display: block;
+      text-decoration: none;
+      color: black;
+      padding: 12px 24px;
+    }
+
+    .wrapper {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0px 12px;
+    }
+
+    .section-lottery {
+      position: relative;
+      height: calc(100vh - 300px);
+      background: url(games-bn.png) center/cover no-repeat;
+    }
+
+    .section-lottery:after {
+      content: '';
+      position: absolute;
+      background: rgba(0,0,0,0.4);
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+    }
+
+    .section-lottery__card {
+      display: inline-block;
+      background: white;
+      position: relative;;
+      margin: 0;
+      color: white;
+      z-index: 2;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .section {
+      text-align: center;
+      margin-top: 79px;
+    }
+
+    .footer__top .wrapper {
+      flex-direction: column-reverse;
+    }
+
+    .footer__info {
+      margin-right: 0;
+      margin-top: 16px;
+    }
+
+    footer {
+      margin-top: 48px;
+      padding: 12px;
+    }
+   
+    .footer__bottom {
+      background: #35564b;
+      padding: 12px;
+      text-align: center;
+      color: white;
+      font-size: 16px;
+    }
+
+    .footer__top {
+      background: #e8efee;
+      padding: 35px;
+      color: #484848;
+    }
+
+    .footer__info {
+      margin-right: 16px;
+      margin-bottom: 39px
+    }
+
+    .secion__comments {
+      flex-direction: column;
+    }
+
+    .footer__top .wrapper {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .footer__info div + div {
+      margin-top: 10px;
+    }
+
+    .footer__site {
+      font-size: 36px;
+      color: #489846;
+    }
+
+    .section__comments {
+      display: flex;
+      margin-top: 72px;
+    }
+
+    @media(max-width: 768px) {
+      .navbar .wrapper {
+        height: 108px;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 0px;
+      }
+
+      .navbar__site-name {
+        margin-top: 10px;
+      } 
+    
+      .navbar__list {
+        display: flex;
+        width: 100%;
+      }
+
+      .navbar__list li {
+        flex: 1;
+        margin-left: 0;
+        border-radius: 0;
+        text-align: center;
+      }
+
+      .navbar__list li.active, .navbar__list li:hover {
+        background: #ff7286;
+      }
+
+      .footer__top .wrapper {
+        flex-direction: column-reverse;
+      }
+
+      .footer__info {
+        margin-right: 0;
+        margin-top: 16px;
+      }
+  }
+
+  </style>
+</head>
+<body>
+  <nav class='navbar'>
+    <div class="wrapper">
+    <div class='navbar__site-name'>
+      Just A Bite!
+    </div>
+    <ul class='navbar__list'>
+      <li class='active'><a href="#">抽個大獎</a></li>
+      <li><a href="#">我要點餐</a></li>
+      <li><a href="#">查詢訂單</a></li>
+      <li><a href="#">常見問題</a></li>
+    </ul>
+  </nav>
+
+  <section class="section-lottery">
+    <div class="section-lottery__card">
+      咬一口廚房
+    </div>
+  </section>
+ 
+   <footer>
+      <div class="footer__top">
+        <div class="wrapper">
+          <div class="footer__info">
+            <div>餐館地址: 天上地下天堂路三分之一里六段520號</div>
+	    <div>訂位專線：02-1314-5566</div>
+	    <div>營業時間：週一〜週五 09:00~18:00 / 週六、週日、國定假日（含連假）休息</div>
+	    <div>email：service@justabite.com.tw</div>
+          </div>
+	<div>
+           <div class="footer__site">Just A Bite!</div>
+	   <div>Facebook / Instagram / Youtube</div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+         Copyright © 2020 Just A Bite All Rights Reserved. 咬一口股份有限公司版權所有
+      </div>
+   </footer>	   
+
+</body>
+</html>

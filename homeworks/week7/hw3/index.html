@@ -1,0 +1,46 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Todo List</title>
+    <link rel="stylesheet" href="./style.css"  />
+ </head>
+ <body>
+    <div>
+      <input type="text" id="content">
+      <button id="add">新增</button>
+    </div>
+    <ul id="todoList">
+      <li>看線上課程</li>
+      <li>運動</li>
+    </ul>
+    <script>
+       const addButton = document.getElementById("add");
+       const inputElement = document.getElementById("content");
+       const todoList = document.getElementById("todoList");
+
+       function addItem(content) {
+         const todoItem = document.createElement('li');
+	 todoItem.innerText = content;
+	 document.getElementById('todoList').appendChild(todoItem);
+		   }
+
+       function deleteItem(element) {
+         element.remove();
+		   }
+
+       addButton.addEventListener('click', function() {
+         if(inputElement.value) {
+            addItem(inputElement.value.trim());
+         }
+	})
+
+	todoList.addEventListener('click', function(e) {
+	  if(event.target.tagName === 'Li') {
+             deleteItem(event.target);
+	  }
+	 , true})
+   </script>
+   </body>
+</html>
+
+
